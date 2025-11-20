@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Delius Swash Caps", Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url("assets//gifs/anime-pink.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(rgba(255, 0, 150, 0.30) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 150, 0.30) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+    z-index: 5;
+}
+
+.win98-window {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.win98-content {
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.win98-window.pink {
+    background: #ffd6f4;  /* rosa pastel */
+}
+
+.win98-window.pink .win98-titlebar {
+    background: linear-gradient(to right, #ff44c7, #ff8ae2); /* rosa neon → pastel */
+    color: white;
+
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid #ffb3ec;
+}
+
+.win98-window.pink .win98-close {
+    background: #ffb2e6;
+    border: 2px solid #ffe3f8;
+
+    border-right-color: #000;
+    border-bottom-color: #000;
+
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+.win98-window.pink .win98-content {
+    padding: 15px;
+
+    background: #ffe4f7;  
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #ff87d0;
+    border-bottom: 2px solid #ff87d0;
+}
+
+.pink-btn {
+    display: inline-block;
+    text-decoration: none; /* remove sublinhado */
+
+    background: #ff87d0;
+    border: 2px solid #ffe3f8;
+
+    border-right-color: #000;
+    border-bottom-color: #000;
+
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000;
+    margin-top: 10px;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.pink-btn:active {
+    border-left-color: #000;
+    border-top-color: #000;
+
+    border-right-color: #ffe3f8;
+    border-bottom-color: #ffe3f8;
+
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 #000;
+}
+
+.btn-row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.page-title {
+    font-size: 22px;
+    color: #ff44c7;
+    text-shadow: 1px 1px #ffb2e6;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* imagem */
+.about-img {
+    width: 50px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    margin: 10px 0;
+}
+
+.section-title {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #ff2fae;
+    text-shadow: 1px 1px #ffb2e6;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 10px 30px;       
+    list-style: none;
+    padding: 0;
+    background: #ffd6f4;
+    padding: 12px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 15px;
+    color: #000;
+    border-left-color: #fff;
+    border-top-color: #fff;
+}
+
+.interests-list li {
+    width: calc(50% - 30px);  /* 2 colunas */
+}
+
+
+.btn-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+a {
+    color: #ff2fae;        /* escolha a cor */
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.polaroid {
+    width: fit-content;
+    padding: 12px;
+    background: #fff;
+    border: 3px solid #ffc6ec;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 0 15px #ff9adb;
+}
+
+.profile-pic-square {
+    width: 160px;      /* tamanho de foto de perfil */
+    height: 160px;
+    object-fit: cover; /* mantém a imagem sem distorcer */
+    border-radius: 8px; /* cantos suaves estilo Y2K */
+    border: 3px solid #ff8fd6;
+    margin-bottom: 10px;
+
+    box-shadow: 0 0 10px #ff9adb, 
+                0 0 20px #ff6bcf;   /* glow rosa */
+}
+
+.polaroid p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #eb41b5;
+}
+
+body{
+    color: #aa204c;
+    background-color: rgb(155, 90, 216);
+}
+
+.texto {
+    margin: 1rem;
+    padding: 1rem ;
+}
+ul{
+   display: flex; 
+   justify-content: space-between ;
+   list-style-type: none;
+   align-items: center;
+   padding: 16px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: rgb(240, 98, 169);
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    background: rgba(253, 150, 201, 0.35);
+    backdrop-filter: blur(4px);
+    padding: 8px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+main img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px; 
+    background-color: #fc739e;
+    border: 6px solid #aa204c;
+    margin-top: 100px; 
+}
+
+.center{
+   text-align: center; 
+
+}
+
+.texto {
+  padding: 20px;      
+  text-align: center;   
+}
+
+footer {
+    background: rgba(241, 114, 178, 0.35); 
+    color: #77003c;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;  
+}
+
+.paragrafo-footer {
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    gap: 5px; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+} 
+
+.paragrafo-footer a {
+    color: #aa204c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+nav a:hover {
+    color: #dd13a0;
+}
+
+#relogio {
+    font-size: 60px;
+    color: #aa204c;
+    width: 300px;
+    height: 100px;
+    background: rgba(236, 20, 128, 0.35);
+    border-radius: 10px;
+
+    margin: 20px auto;    /* centraliza o relógio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

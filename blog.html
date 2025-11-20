@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="assets//gifs/leveta-lunaty-pink.gif">
+    <title>✧ BLOG ✧</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+   <div class="container">
+    <nav>
+        <ul>
+         <li>
+           <a href="sobremim.html">Sobre mim</a>  
+         </li>
+         <li>
+             <a href="projetos.html">Projetos</a>  
+           </li>
+           <li>
+             <a href="contato.html">Contato</a>  
+           </li>
+        </ul>
+     </nav>
+  </header> 
+  <main>  
+        <div class="center">
+          <img src="assets/perfil.jpg"></img>
+        </div>      
+       <div class="texto">
+    <h1>Veronika Boff</h1>
+    <h2>Estudante de programação</h2>
+  </div>
+
+          
+     <div id="relogio"></div>
+        <script>
+           function atualizarRelogio() {
+           const agora = new Date();
+
+            let horas = agora.getHours().toString().padStart(2, '0');
+            let minutos = agora.getMinutes().toString().padStart(2, '0');
+            let segundos = agora.getSeconds().toString().padStart(2, '0');
+
+               document.getElementById('relogio').textContent =
+              `${horas}:${minutos}:${segundos}`;
+            }
+
+         setInterval(atualizarRelogio, 1000);
+         atualizarRelogio();
+      </script>
+
+</main>
+
+   <footer> 
+    <p class ="paragrafo-footer">✉️Email: veronikaboff@gmail.com</p>
+    <p class ="paragrafo-footer"> &copy;Veronika Boff</p>
+ </footer>    
+</body>
+</html>
